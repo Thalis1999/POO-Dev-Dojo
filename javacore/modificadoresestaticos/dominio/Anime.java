@@ -9,8 +9,15 @@ public class Anime {
     // 2 - Cada atributo de classe é criado e inicializado com valores dafault ou que for passada
     // 3 - Bloco de inicialização é executado
     // 4 - Construtor é executado
+
     static {  //Executado 1 vez.
         System.out.print("Bloco de inicialização");
+    }
+    static {
+        System.out.print("Bloco de inicialização 2");
+    }
+    static {
+        System.out.print("Bloco de inicialização 3");
     }
 
     public Anime(String nome, int[] episodios) {
