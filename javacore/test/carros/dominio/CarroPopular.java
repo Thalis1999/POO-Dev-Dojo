@@ -1,4 +1,4 @@
-package javacore.test.dominio;
+package javacore.test.carros.dominio;
 
 public class CarroPopular extends Veiculo {
 

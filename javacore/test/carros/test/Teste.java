@@ -1,9 +1,8 @@
-package javacore.test.test;
+package javacore.test.carros.test;
 
-import javacore.test.dominio.CarroEsportivo;
-import javacore.test.dominio.CarroPopular;
-import javacore.test.dominio.CarroEletrico;
-import javacore.test.dominio.CarroPopular;
+import javacore.test.carros.dominio.CarroEsportivo;
+import javacore.test.carros.dominio.CarroPopular;
+import javacore.test.carros.dominio.CarroEletrico;
 
 public class Teste {
     static void main() {

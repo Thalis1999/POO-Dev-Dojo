@@ -1,4 +1,4 @@
-package javacore.test.dominio;
+package javacore.test.carros.dominio;
 
 public class CarroEletrico extends CarroPopular{
     private static final double TAXA_CARGA_POR_HORA = 25.0;
