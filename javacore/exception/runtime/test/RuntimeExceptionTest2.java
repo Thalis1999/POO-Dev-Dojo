@@ -1,6 +1,6 @@
 package javacore.exception.runtime.test;
 
-public class RuntimeException2 {
+public class RuntimeExceptionTest2 {
     static void main() {
         divisao(1,0);
         System.out.println("Código finalizado.");
@@ -15,7 +15,7 @@ public class RuntimeException2 {
      */
     private static int divisao(int a, int b) {
         if(b == 0) {
-            throw new RuntimeException("Não se divide por 0");
+            throw new IllegalArgumentException("Não se divide por 0");
         }
         return a/b;
     }
