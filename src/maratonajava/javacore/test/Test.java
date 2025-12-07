@@ -1,0 +1,21 @@
+package src.maratonajava.javacore.test;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Test {
+    static void main() throws IOException {
+        File file = new File("file.txt");
+        try(FileReader fileReader = new FileReader(file)){
+
+//        int i;
+//        while ((i = fileReader.read()) != -1) {
+//            System.out.print((char) i);
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}
