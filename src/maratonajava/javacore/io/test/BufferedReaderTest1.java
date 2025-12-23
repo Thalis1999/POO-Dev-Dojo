@@ -11,9 +11,6 @@ public class BufferedReaderTest1 {
                 while ((linha = bufferedReader.readLine()) != null){
                     System.out.println(linha);
                 }
-
-
-
         }catch (IOException e){
             e.printStackTrace();
         }

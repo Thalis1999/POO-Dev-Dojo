@@ -13,6 +13,7 @@ public class DateTimeFormatterTest1 {
         System.out.println(s1);
         System.out.println(s2);
         System.out.println(s3);
+        System.out.println("--------------------------------");
 
         LocalDate parse1 = LocalDate.parse("20210219", DateTimeFormatter.BASIC_ISO_DATE);
         LocalDate parse2 = LocalDate.parse("2021-02-19+05:00", DateTimeFormatter.ISO_DATE);
