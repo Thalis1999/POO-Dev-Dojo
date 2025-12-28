@@ -6,6 +6,7 @@ public class ScannerTest1 {
     static void main() {
         // \\s pula aonde tem a expressao
         String texto = "Levi, Eren, Mikasa, true, 200";
+        // String formatTelefone = entrada.replaceAll("(\\d{2})(\\d{5})(\\d{4})", "($1) $2-$3")
         Scanner scanner = new Scanner(texto);
         scanner.useDelimiter(",");
         while (scanner.hasNext()){
