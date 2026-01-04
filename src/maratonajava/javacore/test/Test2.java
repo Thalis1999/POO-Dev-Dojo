@@ -1,16 +1,23 @@
 package src.maratonajava.javacore.test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Test2 {
     static void main() {
         Scanner sc = new Scanner(System.in);
+        test();
+        System.out.println("Ola");
 
-        String telefone = sc.next();
-        String format = telefone.replaceAll("(\\d{2})(\\d{5})(\\d{4})", "($1) $2-$3");
-        String fixo = sc.next();
-        String format1 = fixo.replaceAll("(\\d{2})(\\d{4})(\\d{4})", "($1) $2-$3");
-        System.out.println(format);
-        System.out.println(format1);
+
+    }
+
+    static void test() {
+        new IOException();
     }
 }
