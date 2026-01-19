@@ -1,4 +1,4 @@
-package src.maratonajava.javacore.nio.test.filepersistence;
+package src.maratonajava.javacore.io.filepersistence;
 
 import java.io.IOException;
 

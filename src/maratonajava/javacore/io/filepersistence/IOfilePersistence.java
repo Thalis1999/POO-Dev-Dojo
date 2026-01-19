@@ -1,4 +1,4 @@
-package src.maratonajava.javacore.nio.test.filepersistence;
+package src.maratonajava.javacore.io.filepersistence;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -102,7 +102,6 @@ public class IOfilePersistence implements FilePersistence {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private List<String> toListString() {

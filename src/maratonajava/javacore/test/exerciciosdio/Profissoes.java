@@ -1,4 +1,4 @@
-package src.maratonajava.javacore.test.exer1dio;
+package src.maratonajava.javacore.test.exerciciosdio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ class Manager extends Consultant {
         super(name, "Manager");
     }
 }
-public class Main {
+public class Profissoes {
     static void main() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insira");
