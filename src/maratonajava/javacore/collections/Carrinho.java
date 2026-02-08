@@ -1,6 +1,6 @@
-package src.maratonajava.javacore.test;
+package src.maratonajava.javacore.collections;
 
-
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,102 +8,97 @@ import java.util.Scanner;
 class Item {
     private String nome;
     private double preco;
-    private int quantidade;
+    private int quant;
 
-    public Item(String nome, double preco, int quantidade) {
+    public Item(String nome, double preco, int quant) {
         this.nome = nome;
         this.preco = preco;
-        this.quantidade = quantidade;
+        this.quant = quant;
     }
-
     public String getNome() {
         return nome;
     }
-
     public double getPreco() {
         return preco;
     }
-
-    public int getQuantidade() {
-        return quantidade;
+    public int getQuant() {
+        return quant;
     }
 
     @Override
     public String toString() {
         return "Item{" +
-                "nome='" + nome + '\'' +
-                ", preco=" + preco +
-                ", quantidade=" + quantidade +
+                "nome = '" + nome + '\'' +
+                ", preco = " + preco +
+                ", quant = " + quant +
                 '}';
     }
 }
 
 class CarrinhoDeCompras {
-    List<Item> itemList = new ArrayList<>();
+    private List<Item> itemList;
 
     public CarrinhoDeCompras() {
         this.itemList = new ArrayList<>();
     }
 
-    public void adicionarItem(Item item) {
+    public void adicionarItem(Item item){
         this.itemList.add(item);
     }
-
     /*
-    // Forma imperativa para calcular valor total
+    // Imperativo
     public double calcularValorTotal() {
         if (this.itemList.isEmpty()) {
-            throw new RuntimeException("Lista vazia.");
+            throw new RuntimeException("Carrinho vazio.");
         }
         double valorTotal = 0;
         if (!itemList.isEmpty()) {
             for (Item item : itemList) {
-                valorTotal += item.getPreco() * item.getQuantidade();
+                valorTotal += item.getPreco() * item.getQuant();
             }
         }
-        return valorTotal;*/
+        return valorTotal; */
 
-    // Declarativa usando stream API
+
+    // Declarativo com stream API
     public double calcularValorTotal() {
-        if (itemList.isEmpty()) {
+        if (itemList.isEmpty()){
             throw new RuntimeException("Lista vazia.");
         }
         return itemList.stream()
-                .mapToDouble(item -> item.getPreco() * item.getQuantidade())
+                .mapToDouble(item -> item.getPreco() * item.getQuant())
                 .sum();
     }
-
-    public void listarItens() {
+    public void listarItems() {
         for (Item item : itemList) {
             System.out.println(item);
         }
     }
 }
 
-public class Test2 {
-    static void main(String[] args) {
+public class Carrinho {
+    static void main() throws IOException {
         Scanner scanner = new Scanner(System.in);
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 
-        for (int i = 0; i <= 2; i++) {
-            System.out.println("Digite o item " + i);
+        for (int i = 1; i <= 2; i++) {
+            System.out.println("Adicione o item " + i);
 
-            System.out.println("Nome: ");
+            System.out.println("Digite o nome: ");
             String nome = scanner.nextLine();
 
-            System.out.println("Preco: ");
+            System.out.println("Digite o preço: ");
             double preco = scanner.nextDouble();
 
-            System.out.println("Quantidade: ");
+            System.out.println("Digite a quantidade: ");
             int quantidade = scanner.nextInt();
 
             scanner.nextLine();
-
-            Item produto = new Item(nome, preco, quantidade);
-            carrinho.adicionarItem(produto);
-
+            Item novoItem = new Item(nome, preco, quantidade);
+            carrinho.adicionarItem(novoItem);
         }
-        carrinho.listarItens();
-        System.out.println("Valor total foi de " + carrinho.calcularValorTotal());
+        carrinho.listarItems();
+        System.out.println("Valor total da compra foi de: " + carrinho.calcularValorTotal());
     }
 }
+
